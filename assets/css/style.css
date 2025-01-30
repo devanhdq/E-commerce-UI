@@ -1208,6 +1208,35 @@ form.search button:hover {
   visibility: inherit;
 }
 /* 
+ 08. PAGE SINGLE 
+		  a. Breadcrumb 
+*/
+.page-home .dpt-cat .dpt-trigger,
+.dpt-trigger .ri-close-line,
+.show-dpt .dpt-trigger .ri-menu-3-line {
+  display: none;
+}
+
+.show-dpt .dpt-trigger .ri-close-line {
+  display: block;
+}
+.breadcrumb {
+  font-size: var(--font-small);
+  margin-bottom: 2em;
+}
+.breadcrumb li:not(:last-child)::after {
+  content: ">";
+  padding: 0 0.35em;
+}
+.breadcrumb li:last-child {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--light-text-color);
+}
+
+/* 
   15. RESPONSIVE 
 */
 @media screen and(min-width: 481px) {
@@ -1440,5 +1469,13 @@ form.search button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  /* Page Single */
+  #page:not(.page-home) .dpt-menu {
+    display: none;
+  }
+  #page.show-dpt .dpt-menu {
+    display: block;
   }
 }

@@ -30,19 +30,6 @@ closeButton.addEventListener("click", function () {
   addClass.classList.remove("show-menu");
 });
 
-// Show sub menu on mobile
-// const subMenu = document.querySelectorAll(".has-child .icon-small");
-// subMenu.forEach((menu) => menu.addEventListener("click", toggle));
-
-// function toggle(e) {
-//   e.preventDefault();
-//   subMenu.forEach((item) =>
-//     item != this ? item.closest(".has-child").classList.remove("expand") : null
-//   );
-//   if (this.closest(".has-child").classList != "expand");
-//   this.closest(".has-child").classList.toggle("expand");
-// }
-
 const subMenu = document.querySelectorAll(".has-child .icon-small");
 
 subMenu.forEach((menu) => menu.addEventListener("click", toggle));
@@ -66,15 +53,22 @@ const swiper = new Swiper(".swiper", {
 });
 
 // Show search
-// Show search
 const searchButton = document.querySelector(".t-search"),
   tClose = document.querySelector(".search-close"),
   showClass = document.querySelector(".site");
 
-searchButton.addEventListener("click", function() {
+searchButton.addEventListener("click", function () {
   showClass.classList.toggle("show-search");
 });
 
 tClose.addEventListener("click", function () {
   showClass.classList.remove("show-search");
+});
+
+//show dpt menu
+const dptButton = document.querySelector(".dpt-cat .dpt-trigger");
+const dptClass = document.querySelector(".site");
+
+dptButton.addEventListener("click", function () {
+  dptClass.classList.toggle("show-dpt");
 });
